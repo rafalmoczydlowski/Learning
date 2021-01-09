@@ -12,12 +12,12 @@ public class DefenderFootballerStats implements FootballerStats {
         this.footballer = footballer;
     }
 
-    public void getPosition() {
-        footballer.getPlayerPosition();
-    }
-
     @Autowired
     public void setFootballer(Footballer footballer) {
         this.footballer = footballer;
+    }
+
+    public void getPosition() {
+        footballer.getPlayerPosition();
     }
 }

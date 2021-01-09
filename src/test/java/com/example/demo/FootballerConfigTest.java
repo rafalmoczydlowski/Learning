@@ -27,6 +27,7 @@ public class FootballerConfigTest {
     @Autowired
     private Footballer footballer;
 
+
     @Test
     public void footballerShouldNotBeNull() {
         assertNotNull(footballer);
@@ -37,5 +38,13 @@ public class FootballerConfigTest {
         log.clearLog();
         footballerStats.getPosition();
         Assert.assertEquals("I'm playing as defender\n", log.getLogWithNormalizedLineSeparator());
+    }
+
+    @Test
+    public void getName() {
+        DefenderFootballer defenderFootballer = new DefenderFootballer("Rafał", "Moczydłowski");
+        log.clearLog();
+        defenderFootballer.introduceThePlayer();
+        Assert.assertEquals("The player's name is: Rafał Moczydłowski", log.getLogWithNormalizedLineSeparator().trim());
     }
 }
