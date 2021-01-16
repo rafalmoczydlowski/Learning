@@ -6,6 +6,6 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @PropertySource("classpath:/defender.properties")
-@ComponentScan
+@ComponentScan("com.example.demo")
 public class ExpressiveConfig {
 }
